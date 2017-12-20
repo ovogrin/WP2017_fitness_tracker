@@ -1,3 +1,0 @@
- 
-
-My computer science (or programming) experience started in the summer of 2015.  I was accepted into New Paltz Computer Science program long after graduating with an associates in business administration from DCC in 2009.  Before starting classes I followed tutorials online (freecodecamp.com) and learned html, css, and javascript.  After 2 years at New Paltz, I have taken CS 1, 2, and 3, Embedded Linux, Software Engineering, Assembly and Computer Architecture, and Language Processing.  I am familiar with: Android Studio, Git-Github, Eclipse IDE, Atom IDE, Java, Python, C, Javascript, JQuery, Bootstrap, LibGDX, Wordpress.
