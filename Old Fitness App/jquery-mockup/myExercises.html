@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Exercises Page</title>
+    <link rel="stylesheet" href="dist/main.bundle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header-placeholder" class="page-bg"></div>
+
+        <!-- <div class="container page-bg"> -->
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-white bg-info">
+                    <div class="card-header card-header-font">
+                        Available Exercises
+                    </div>
+                    <ul class="list-group list-group-flush" id="avExercisesList">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top" src="./images/myexercises.jpg" alt="Card image cap" id="picture">
+
+                        <div class="card text-white bg-dark">
+                            <div class="card-header card-header-font">
+                                Exercise Info
+                            </div>
+                            <ul class="list-group list-group-flush" id="exerciseInfo">
+                            </ul>
+                            <a href="#" class="btn btn-primary" id="addExercises">Add to My Exercises</a>  
+                            <a href="#" class="btn btn-danger" id="removeExercises">Back to Available Exercises</a>                                                        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 ml-md-auto">
+                <div class="card text-white bg-info">
+                    <div class="card-header card-header-font">
+                        My Exercises
+                    </div>
+                    <ul class="list-group list-group-flush" id="myExercisesList">
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var navProperties = {
+            mainNav: "_nav.html",
+            currentSection: "myExercises"
+        };
+    </script>
+    <script src="dist/bundle.js">
+    </script>
+</body>
+
+</html>
