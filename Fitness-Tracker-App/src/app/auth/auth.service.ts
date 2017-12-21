@@ -1,10 +1,22 @@
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class AuthService {
     token: string;
 
+    constructor(private router: Router){
+
+    }
+
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(
+                response => {
+                    this.router.navigate(['/signin'])
+                }
+            )
             .catch(
                 error => console.log(error)
             )
@@ -14,6 +26,7 @@ export class AuthService {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
                 response => {
+                    this.router.navigate(['/exercises']);
                     firebase.auth().currentUser.getToken()
                         .then(
                             (token: string) => this.token = token
@@ -32,12 +45,20 @@ export class AuthService {
             'display': 'popup'
           });
         
-      firebase.auth().signInWithPopup(provider).then(function(result) {
+      firebase.auth().signInWithPopup(provider)
+        .then(
+            result => {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const token = result.credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        // ...
+        this.router.navigate(['/']);
+
+        firebase.auth().currentUser.getToken()
+                .then(
+                    (token: string) => this.token = token
+                )
+        // ...        
       }).catch(function(error) {
         // Handle Errors here.
         const errorCode = error.code;
@@ -50,11 +71,21 @@ export class AuthService {
         });
     }
 //------------
+    logout(){
+        firebase.auth().signOut();
+        this.token = null;
+        this.router.navigate(['/signin']);
+    }
+
     getToken() {
         firebase.auth().currentUser.getToken()
             .then(
                 (token: string) => this.token = token
             );
         return this.token;
+    }
+
+    isAuthenticated() {
+        return this.token != null;
     }
 }
