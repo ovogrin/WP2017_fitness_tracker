@@ -1,39 +1,38 @@
 <div class="row">
-    <div class="col-xs-12">
-      <img 
-      [src]="exercise.imagePath" 
-      alt="{{ exercise.name }}" 
-      class="img-responsive"
-      style="max-height: 300px;">
-    </div>
+  <div class="col-xs-12">
+    <img [src]="exercise.imagePath" alt="{{ exercise.name }}" class="img-responsive" style="max-height: 300px;">
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-  <h1>{{ exercise.name }}</h1>  
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ exercise.name }}</h1>
   </div>
-  </div><div class="row">
-    <div class="col-xs-12">
-      <div class="btn-group"
-        appDropdown>
-        <button 
-          type="button" 
-          class="btn btn-primary dropdown-toggle">
-          Manage Exercise <span class="caret"></span>
-        </button>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Exercise
+        <span class="caret"></span>
+      </button>
       <ul class="dropdown-menu">
-        <li><a>Edit Exercise</a></li>
-        <li><a>Delete Exercise</a></li>      
+        <li>
+          <a>Edit Exercise</a>
+        </li>
+        <li>
+          <a>Delete Exercise</a>
+        </li>
       </ul>
-      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      {{ exercise.description }}
-    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ exercise.description }}
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      Repetitions/Quantity
-    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Repetitions/Quantity
   </div>
+</div>

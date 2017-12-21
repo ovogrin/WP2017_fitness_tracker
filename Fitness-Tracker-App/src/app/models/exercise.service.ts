@@ -24,7 +24,7 @@ export class ExerciseService {
         this.exercises = exercises;
         this.exercisesChanged.next(this.exercises.slice());
     }
-
+ 
     getExercises(){
         return this.exercises.slice();
     }

@@ -2,6 +2,8 @@ import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 
+declare var FB: any;
+
 @Injectable()
 export class AuthService {
     token: string;
@@ -41,6 +43,7 @@ export class AuthService {
     signInWithFacebook(){
         const provider = new firebase.auth.FacebookAuthProvider();
         provider.addScope('public_profile');
+        provider.addScope('email');
         provider.setCustomParameters({
             'display': 'popup'
           });
@@ -52,7 +55,7 @@ export class AuthService {
         const token = result.credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
 
         firebase.auth().currentUser.getToken()
                 .then(
