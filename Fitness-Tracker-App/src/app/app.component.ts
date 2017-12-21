@@ -10,6 +10,7 @@ export class AppComponent implements OnInit{
   loadedFeature = 'home';
 
   ngOnInit(){
+    //Google Firebase used as a database for users and exercises
     firebase.initializeApp({
       apiKey: "AIzaSyA3ewPTVDbpkddIZQ20gyG_glrP7Y-GjoY",
       authDomain: "fitness-tracking-app.firebaseapp.com"
