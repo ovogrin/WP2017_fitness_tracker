@@ -1,6 +1,16 @@
 # FitnessTrackerApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+The application can be accessed at: http://fitness-tracking-app-deployment.s3-website-us-east-1.amazonaws.com
+Before the navigation menu can be accessed the user would need to log in.  This can be done by first signing up with an email and password (more than 6 characters), or logging in through a facebook account.  The log in and sing up menus can be accessed on the top right corner of the screen.
+
+## Required
+
+Latest version of Angular and Node.js
+
+## Dependencies
+
+Run `npm install` to install all dependencies
 
 ## Development server
 
