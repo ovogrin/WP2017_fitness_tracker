@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
     token: string;
 
-    constructor(private router: Router){
+    constructor(public router: Router){
 
     }
 

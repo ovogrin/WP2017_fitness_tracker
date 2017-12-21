@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExerciseService } from '../models/exercise.service';
 
 @Component({
   selector: 'app-guide',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guide.component.css']
 })
 export class GuideComponent implements OnInit {
+
 
   constructor() { }
 
