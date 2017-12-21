@@ -1,3 +1,11 @@
-<p>
-  exercise works!
-</p>
+<a
+  class="list-group-item clearfix"
+  (click)="onSelected()">
+    <div class="pull-left">
+      <h4 class="list-group-item-heading">{{ exercise.name }}</h4>
+      <p class="list-group-item-text">{{ exercise.description }}</p>
+    </div>
+    <span class="pull-right">
+      <img [src]="exercise.imagePath" alt="{{ exercise.name }}" class="img-responsive" style="max-height: 50px;">
+    </span>
+  </a>

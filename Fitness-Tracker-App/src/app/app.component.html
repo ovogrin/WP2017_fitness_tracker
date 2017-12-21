@@ -2,9 +2,13 @@
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-md-12">
-      <app-login *ngIf="loadedFeature === 'login'"></app-login>
+      <router-outlet></router-outlet>
+
+      <!-- <app-login *ngIf="loadedFeature === 'login'"></app-login>
       <app-guide *ngIf="loadedFeature === 'guide'"></app-guide>
-      <app-exercises *ngIf="loadedFeature === 'exercises'"></app-exercises>
+      <app-exercises *ngIf="loadedFeature === 'exercises'"></app-exercises> -->
+    
+    
     </div>
   </div>
 </div>

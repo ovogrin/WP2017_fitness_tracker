@@ -1,3 +1,13 @@
-<p>
-  exercises works!
-</p>
+<div class="row">
+  <div class="col-md-5">
+    <app-exercise-list></app-exercise-list>
+  </div>
+  <div class="col-md-7">
+    <app-exercise-detail
+      *ngIf="selectedExercise; else infoText"
+      [exercise]="selectedExercise"></app-exercise-detail>
+      <ng-template #infoText>
+        <p>Please Select an Exercise</p>
+      </ng-template>
+  </div>
+</div>

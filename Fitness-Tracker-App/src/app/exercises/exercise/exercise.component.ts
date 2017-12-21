@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Exercise } from './exercise.model';
+import { ExerciseService } from '../../models/exercise.service';
+
 
 @Component({
   selector: 'app-exercise',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
+  @Input() exercise: Exercise;
 
-  constructor() { }
+  constructor(private exerciseService: ExerciseService) { }
 
   ngOnInit() {
+  }
+
+  onSelected(){
+    this.exerciseService.exerciseSelected.emit(this.exercise)
   }
 
 }
